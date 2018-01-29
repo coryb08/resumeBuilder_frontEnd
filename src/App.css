@@ -18,6 +18,13 @@
   font-size: 8.5em;
 }
 
+/* .centeredT {
+  position: relative !important;
+  text-align: center !important;
+  float: center !important;
+  align: center;
+} */
+
 .App-intro {
   font-size: large;
 }
