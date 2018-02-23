@@ -6,7 +6,6 @@ import { Link } from "react-router-dom";
 
 class Form extends React.Component {
   constructor(props) {
-    console.log("in form EDIT!!y props", props);
     super(props);
     this.state = {
       resumeName: this.props.resume.name,
@@ -35,6 +34,8 @@ class Form extends React.Component {
       templateId: this.props.resume.template_id
     };
   }
+
+
 
   handleChange = e => {
     e.preventDefault();
@@ -121,6 +122,10 @@ class Form extends React.Component {
     console.log(e.target);
   };
 
+
+
+
+
   componentWillReceiveProps(nextProps) {
     console.log("will receive props", nextProps);
     if (nextProps.resume === undefined) {
@@ -147,13 +152,14 @@ class Form extends React.Component {
 
   render() {
     return (
-      <div>
+      <div className="form">
         <br />
-        <div className="leftAlign">
+
+
           <button onClick={this.backHome} className="leftAlign ui gray button">
             {"< Back"}
           </button>
-        </div>
+
         <div className="column-1">
           <form
             className="ui large form"
@@ -226,7 +232,7 @@ class Form extends React.Component {
                   name="email"
                   onChange={this.handleChange}
                 />
-              </div>
+              </div><br />
             </div>
             <input
               id={this.props.resume.id}

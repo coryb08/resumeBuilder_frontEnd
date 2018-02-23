@@ -1,3 +1,4 @@
+
 import React from "react";
 import "../style.css";
 import JobRender from "./JobRender";
@@ -14,7 +15,7 @@ const RenderPage1 = props => {
     return <div style={{ color: "white" }}>loading...</div>;
   }
   return (
-    <div>
+    <div className="render1Grid">
       <br />
       <div className="leftAlign">
         <button onClick={backHome} className="leftAlign ui gray button">

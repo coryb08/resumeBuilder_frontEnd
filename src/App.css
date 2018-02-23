@@ -4,6 +4,8 @@
   grid-template-rows: 12% 88%;
   height: 100vw;
   position: relative;
+  text-align: center;
+
 }
 
 .header {
@@ -19,6 +21,8 @@
 
 .App-title {
   font-size: 13.5vw;
+  cursor: pointer;
+  display: inline-block;
 }
 
 .template-list {
@@ -37,6 +41,11 @@
   grid-template-columns: 2% 96% 2%;
   grid-template-rows: 2% 30% 68%;
   grid-row: 2 / 3;
+  grid-column: 2 / 4;
+}
+
+.render1Grid{
+  grid-row: 2 / -1;
   grid-column: 2 / 4;
 }
 
@@ -118,8 +127,194 @@
 }
 
 .form {
+
   width: 50vw;
   grid-row: 2 / 3;
   grid-column: 2 / 3;
   padding-bottom: 9%;
 }
+
+#dashImg {
+  height: 10px;
+  width: 18px;
+ }
+
+ .leftAlign {
+   text-align: left !important;
+   margin-left: 20px !important;
+ }
+
+
+
+ /*  --------------------------------*/
+
+ .centered {
+   height: 100%;
+   width: 100%;
+   min-width: 50px !important;
+   position: relative;
+ }
+
+ .App-intro {
+   font-size: large;
+ }
+
+ @keyframes App-logo-spin {
+   from {
+     transform: rotate(0deg);
+   }
+   to {
+     transform: rotate(360deg);
+   }
+ }
+
+
+
+ .smallerDiv {
+   margin-top: -220px !important;
+   transform: scale(0.1, 0.1);
+   -ms-transform: scale(0.8, 0.8); /* IE 9 */
+   -webkit-transform: scale(0.7, 0.7); /* Safari and Chrome */
+   -o-transform: scale(0.8, 0.8); /* Opera */
+   -moz-transform: scale(0.8, 0.8); /* Firefox */
+ }
+
+ .smaller {
+   /* margin-top: -220px !important; */
+   transform: scale(0.1, 0.1);
+   -ms-transform: scale(0.9, 0.9); /* IE 9 */
+   -webkit-transform: scale(0.9, 0.9); /* Safari and Chrome */
+   -o-transform: scale(0.9, 0.9); /* Opera */
+   -moz-transform: scale(0.9, 0.9); /* Firefox */
+ }
+
+
+
+ * {
+   box-sizing: border-box;
+ }
+
+ body {
+   margin: 0;
+ }
+
+
+ .column-templates {
+   float: left;
+   width: 43%;
+   padding: 16px;
+   margin-left: 10%;
+ }
+
+ .column-2 {
+   float: left;
+   width: 36%;
+   padding: 20px;
+   margin-left: 11%;
+ }
+
+ /* Clear floats after the columns */
+ .row:after {
+   content: "";
+   display: table;
+   clear: both;
+ }
+
+
+ .jobDescription {
+   text-align: left;
+ }
+
+ img {
+   width: 20em;
+   height: 15em;
+   font-size: 14pt;
+ }
+
+ /* .containCards {
+   display: grid;
+   justify-content: center;
+   align-items: center;
+   position: relative;
+   text-align: center;
+   margin: auto 0;
+ } */
+
+ .imageArrow {
+   height: 90px;
+   width: 500px;
+   margin-right: 5%;
+   margin-top: 5%;
+ }
+
+
+ .zindex {
+   z-index: 3;
+ }
+
+ .texth3 {
+   vertical-align: top;
+ }
+
+ /* .mask {
+   width: 100%;
+   height: 100%;
+   background-color: white;
+   opacity: 0.2;
+   z-index: 2;
+   position: fixed;
+   top: 0;
+   left: 0;
+   bottom: 0;
+   right: 0;
+ } */
+
+ /* .cardChild {
+   width: 100%;
+   display: auto;
+   position: auto;
+   margin-left: auto;
+   margin-right: auto;
+ }
+
+ .moveUp {
+   bottom: 2.5em;
+ }
+
+ .templateChoose {
+   padding-top: 100%;
+ } */
+
+
+
+ /* label {
+   color: green;
+   font-size: 14pt;
+   padding: 10px;
+ }
+
+ input[type="text"] {
+   width: 100%;
+   padding: 12px 20px;
+   margin: 8px 0;
+   box-sizing: border-box;
+ } */
+
+ .customLabel {
+   overflow: auto;
+   word-wrap: break-word;
+ }
+/*
+ .ui.cards {
+   display: -webkit-box;
+   display: -ms-flexbox;
+   display: flex;
+   margin: -0.3275em 4.2em;
+   -ms-flex-wrap: wrap;
+   flex-wrap: wrap;
+   left: 1%;
+ } */
+
+ li {
+   color: black;
+ }

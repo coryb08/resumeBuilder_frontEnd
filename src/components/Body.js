@@ -217,7 +217,8 @@ class Body extends React.Component {
             )
             // console.log("my resume then state.resume", myResume, this.state.resume)
             return (
-              <div>
+              <div className="body">
+          
                 <FormEdit
                   resume={myResume}
                   handleEdit={this.handleEdit}
@@ -254,11 +255,12 @@ class Body extends React.Component {
                 ) : (
                   <div>
                     <div className="leftAlign">
+                    <br />
                       <button
                         onClick={this.backHome}
                         className="leftAlign ui gray button"
                       >
-                        {"< Back"}
+                        {"<Back"}
                       </button>
                     </div>
                     <Form
