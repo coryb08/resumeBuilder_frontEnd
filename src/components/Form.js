@@ -1,12 +1,12 @@
-import React from "react";
-import Job from "./Job";
-import Education from "./Education";
-import { withRouter } from "react-router-dom";
-import { Link } from "react-router-dom";
+import React from "react"
+import Job from "./Job"
+import Education from "./Education"
+import { withRouter } from "react-router-dom"
+import { Link } from "react-router-dom"
 
 class Form extends React.Component {
   constructor(props) {
-    super(props);
+    super(props)
     this.state = {
       resumeName: "",
       firstName: "",
@@ -32,20 +32,20 @@ class Form extends React.Component {
       skills: "",
       summary: "",
       templateId: this.props.template.id
-    };
+    }
   }
 
   handleChange = e => {
-    e.preventDefault();
-    const name = e.target.name;
-    const value = e.target.value;
+    e.preventDefault()
+    const name = e.target.name
+    const value = e.target.value
     this.setState(prevState => {
-      return { [name]: value };
-    });
-  };
+      return { [name]: value }
+    })
+  }
 
   addJobFields = e => {
-    e.preventDefault();
+    e.preventDefault()
     this.setState({
       jobs: [
         ...this.state.jobs,
@@ -58,22 +58,22 @@ class Form extends React.Component {
           description: ""
         }
       ]
-    });
-  };
+    })
+  }
 
   addEducationFields = e => {
-    e.preventDefault();
+    e.preventDefault()
     this.setState({
       educations: [
         ...this.state.educations,
         { school: "", location: "", degree: "", major: "", graduation_year: "" }
       ]
-    });
-  };
+    })
+  }
 
   handleJobChange = (e, i) => {
-    const name = e.target.name;
-    const value = e.target.value;
+    const name = e.target.name
+    const value = e.target.value
     this.setState(prevState => {
       return {
         jobs: [
@@ -81,14 +81,14 @@ class Form extends React.Component {
           { ...prevState.jobs[i], [name]: value },
           ...prevState.jobs.slice(i + 1)
         ]
-      };
-    });
-  };
+      }
+    })
+  }
 
   handleEducationChange = (e, i) => {
-    const name = e.target.name;
-    const value = e.target.value;
-    console.log("in education", this.state);
+    const name = e.target.name
+    const value = e.target.value
+    console.log("in education", this.state)
     this.setState(prevState => {
       return {
         educations: [
@@ -96,33 +96,28 @@ class Form extends React.Component {
           { ...prevState.educations[i], [name]: value },
           ...prevState.educations.slice(i + 1)
         ]
-      };
-    });
-  };
+      }
+    })
+  }
 
   handleSubmit = e => {
-    e.preventDefault();
-    this.props.handleSubmit(this.state);
-  };
+    e.preventDefault()
+    this.props.handleSubmit(this.state)
+  }
 
   handleError = e => {
-    console.log(e.target);
-  };
+    console.log(e.target)
+  }
 
   backHome = () => {
-    document.location.href = "/";
-  };
+    document.location.href = "/"
+  }
 
   render() {
-    console.log("in props form", this.state);
+    console.log("in props form", this.state)
     return (
-      <div>
+      <div className="form">
         <br />
-        <div className="leftAlign">
-          <button onClick={this.backHome} className="leftAlign ui gray button">
-            {"< Back"}
-          </button>
-        </div>
 
         <div className="column-1">
           <form className="ui large form" onSubmit={this.handleSubmit}>
@@ -177,6 +172,7 @@ class Form extends React.Component {
               <i className="location arrow icon" />
             </div>
             <label />
+            <br />
             <div className="equal width fields">
               <div className="field">
                 <div className="ui fluid left icon input">
@@ -268,8 +264,8 @@ class Form extends React.Component {
           </form>
         </div>
       </div>
-    );
+    )
   }
 }
 
-export default Form;
+export default Form

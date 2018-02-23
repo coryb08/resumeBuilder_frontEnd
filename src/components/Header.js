@@ -1,17 +1,12 @@
-import React from 'react';
+import React from "react"
 
-
-const Header = (props) => {
+const Header = props => {
   // console.log("in header", props);
-  return(
-    <div>
-      <a href={document.location.origin}>
-      <header className="App-header">
-        <h1 className="App-title">Résumed</h1>
-      </header>
-      </a>
+  return (
+    <div className="header">
+      <h1 className="App-title">Résumed</h1>
     </div>
   )
 }
 
-export default Header;
+export default Header

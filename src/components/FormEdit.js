@@ -164,7 +164,7 @@ class Form extends React.Component {
             {/*<select onChange={this.handleTemplate} className="ui dropdown">
             <option value="">Choose template...</option>
             <option value="1">Color</option>
-            <option value="2">Black & White</option>
+            <option value="2">Black&White</option>
           </select>*/}
             <br />
 

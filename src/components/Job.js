@@ -1,4 +1,4 @@
-import React from "react";
+import React from "react"
 
 const Job = props => {
   return (
@@ -10,9 +10,11 @@ const Job = props => {
           name="title"
           onChange={e => props.handleJobChange(e, props.index)}
         />
+        <br />
         <i className="write icon" />
       </div>
       <label />
+      <br />
       <div className="ui fluid left icon input">
         <input
           value={props.job.employer}
@@ -23,6 +25,7 @@ const Job = props => {
         <i className="user icon" />
       </div>
       <label />
+      <br />
       <div className="ui fluid left icon input">
         <input
           value={props.job.location}
@@ -74,7 +77,7 @@ const Job = props => {
       </div>
       <label />
     </div>
-  );
-};
+  )
+}
 
-export default Job;
+export default Job

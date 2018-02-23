@@ -1,6 +1,6 @@
-import React from "react";
-import Card from "./Card";
-import CreateButton from "./CreateButton";
+import React from "react"
+import Card from "./Card"
+import CreateButton from "./CreateButton"
 
 const CardList = props => {
   const cards = props.resumes.map((resume, i) => (
@@ -12,16 +12,13 @@ const CardList = props => {
       handleEdit={props.handleEdit}
       handleDelete={props.handleDelete}
     />
-  ));
+  ))
   return (
-    <div>
-      <br />
-      <br />
-      <br />
-      <h3>Your Saved Resumes</h3>
-      <div className="containCards smaller">{cards}</div>
+    <div className="savedResumes">
+      <h3 className="savedH3">Your Saved Resumes</h3>
+      <div>{cards}</div>
     </div>
-  );
-};
+  )
+}
 
-export default CardList;
+export default CardList

@@ -1,6 +1,6 @@
-import React from "react";
-import Template from "./Template";
-import Diamond from "../template-imgs/arrow.jpg";
+import React from "react"
+import Template from "./Template"
+import Diamond from "../template-imgs/arrow.jpg"
 
 const TemplateList = props => {
   const templates = props.templates.map((template, i) => (
@@ -10,21 +10,13 @@ const TemplateList = props => {
       key={i}
       handleTemplateClick={props.handleTemplateClick}
     />
-  ));
+  ))
   return (
-    <div className="centeredT">
-      <div className="column-templates">
-        <img className="imageArrow" src={Diamond} style={{ width: "100%" }} />
-        <div className="ui grid">
-          <div className=" ui two column grid moveUp centered">
-            <br />
-            <br />
-            {templates}
-          </div>
-        </div>
-      </div>
+    <div className="template-list">
+      <h1 className="choose">Choose your template</h1>
+      {templates}
     </div>
-  );
-};
-
-export default TemplateList;
+  )
+}
+// <img className="imageArrow" src={Diamond} style={{ width: "100%" }} />
+export default TemplateList
